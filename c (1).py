@@ -8,6 +8,9 @@ model = YOLO(r'C:\Users\rahul\python\runs\detect\train2\weights\best.pt')
 video_path = r'C:\Users\rahul\Downloads\m.mp4'
 cap = cv2.VideoCapture(video_path)
 
+if not cap.isOpened():
+    print("Error: Could not open video file.")
+    exit()
 #Loop
 while cap.isOpened():
     #Read a frame
